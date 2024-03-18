@@ -10,14 +10,20 @@ const Stack = createNativeStackNavigator<MainNavigatorStackPropsList>();
 const MainNavigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen
+        name="HomeScreen"
+        component={HomeScreen}
+        options={{headerTitle: 'LinguoPrunto'}}
+      />
       <Stack.Screen
         name="CourseDetailsScreen"
         component={CourseDetailsScreen}
+        options={{headerTitle: 'Course Details'}}
       />
       <Stack.Screen
         name="LessonDetailsScreen"
         component={LessonDetailsScreen}
+        options={{headerTitle: 'Lesson Details'}}
       />
     </Stack.Navigator>
   );
