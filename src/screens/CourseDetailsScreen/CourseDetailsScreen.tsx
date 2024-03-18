@@ -46,6 +46,8 @@ const CourseDetailsScreen = () => {
   return (
     <View style={commonStyles.container}>
       <Image style={styles.image} source={course.imageUrl} resizeMode="cover" />
+      <Text style={styles.title}>Description</Text>
+      <Text style={styles.description}>{course.description}</Text>
       <Text style={styles.title}>Lessons</Text>
       <LessonCardsList lessonsData={lessons} courseId={course.id} />
       {courseComplete && (

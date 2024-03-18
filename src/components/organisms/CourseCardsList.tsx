@@ -14,7 +14,6 @@ const CourseCardsList = ({coursesData}: Props) => {
         <CourseDetailsCard
           key={course.id}
           title={course.title}
-          description={course.description}
           id={course.id}
           imageUrl={course.imageUrl as ImageProps}
         />

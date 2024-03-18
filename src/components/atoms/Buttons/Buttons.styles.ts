@@ -1,14 +1,17 @@
 import {StyleSheet, TextStyle, ViewStyle} from 'react-native';
+import theme from '../../../styles/theme';
 
 const commonButtonLayoutStyles: ViewStyle = {
   flex: 1,
   alignSelf: 'center',
   padding: 5,
   borderRadius: 15,
+  backgroundColor: theme.colors.primary,
 };
 
 const commonFontStyles: TextStyle = {
   fontSize: 20,
+  color: theme.colors.textSecondaryColor,
   fontWeight: '400',
   textAlign: 'center',
 };
@@ -17,17 +20,14 @@ const styles = StyleSheet.create({
   helpButton: {
     ...commonButtonLayoutStyles,
     alignSelf: 'center',
-    backgroundColor: 'gray',
   },
 
   helpButtonText: {
     ...commonFontStyles,
-    color: 'white',
   },
 
   answerButton: {
     ...commonButtonLayoutStyles,
-    backgroundColor: 'gray',
   },
   answerButtonText: {
     ...commonFontStyles,
@@ -37,7 +37,6 @@ const styles = StyleSheet.create({
   finishButton: {
     ...commonButtonLayoutStyles,
     justifyContent: 'flex-end',
-    backgroundColor: 'gray',
   },
   finishButtonText: {
     ...commonFontStyles,

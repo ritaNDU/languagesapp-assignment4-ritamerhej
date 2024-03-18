@@ -6,12 +6,11 @@ import {MainNavigatorNavigationProps} from '../../navigation/MainNavigator.types
 
 type Props = {
   title: string;
-  description: string;
   id: string;
   imageUrl: ImageProps;
 };
 
-const CourseDetailsCard = ({title, description, id, imageUrl}: Props) => {
+const CourseDetailsCard = ({title, id, imageUrl}: Props) => {
   const navigation = useNavigation<MainNavigatorNavigationProps>();
 
   const handleGoToCourse = (courseId: string) => () => {
@@ -26,7 +25,6 @@ const CourseDetailsCard = ({title, description, id, imageUrl}: Props) => {
         <Image source={imageUrl} style={styles.image} />
       </View>
       <Text style={styles.cardTitles}>{title}</Text>
-      <Text>{description}</Text>
     </Pressable>
   );
 };

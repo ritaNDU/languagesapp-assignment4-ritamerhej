@@ -1,4 +1,5 @@
 import {PixelRatio, StyleSheet} from 'react-native';
+import theme from '../../styles/theme';
 
 const logoSize = 25;
 const courseImageSize = 108;
@@ -7,7 +8,7 @@ const styles = StyleSheet.create({
   courseCardContainer: {
     width: 250,
     elevation: 10,
-    backgroundColor: 'lightgray',
+    backgroundColor: theme.colors.backgroundColor,
     padding: 30,
 
     margin: 20,
@@ -20,7 +21,7 @@ const styles = StyleSheet.create({
   imageContainer: {
     height: 200,
     alignItems: 'center',
-    backgroundColor: 'lightblue',
+    backgroundColor: theme.colors.secondary,
     borderRadius: 25,
     marginBottom: 10,
   },
@@ -29,15 +30,11 @@ const styles = StyleSheet.create({
     height: PixelRatio.getPixelSizeForLayoutSize(courseImageSize),
   },
 
-  description: {
-    color: 'gray',
-  },
-
   cardTitles: {
     flex: 1,
     fontSize: 16,
     fontWeight: '500',
-    color: 'black',
+    color: theme.colors.textPrimaryColor,
     margin: 2.5,
   },
 
@@ -48,7 +45,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 25,
     paddingVertical: 10,
 
-    backgroundColor: 'lightgray',
+    backgroundColor: theme.colors.secondary,
     marginBottom: 10,
     borderRadius: 20,
   },

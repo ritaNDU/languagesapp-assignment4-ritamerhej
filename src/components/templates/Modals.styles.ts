@@ -1,7 +1,7 @@
 import {PixelRatio, StyleSheet} from 'react-native';
+import theme from '../../styles/theme';
 
 const imageSize = 200;
-const titleSize = 30;
 
 const styles = StyleSheet.create({
   modalTemplate: {
@@ -23,14 +23,16 @@ const styles = StyleSheet.create({
     gap: 20,
   },
   title: {
-    fontSize: titleSize,
+    fontSize: theme.fontSize.XxLarge,
+    fontWeight: '500',
+    color: theme.colors.textPrimaryColor,
   },
   image: {
     width: PixelRatio.getPixelSizeForLayoutSize(imageSize),
     height: PixelRatio.getPixelSizeForLayoutSize(imageSize),
   },
   successMessage: {
-    fontSize: 20,
+    fontSize: theme.fontSize.large,
   },
 
   buttonContainer: {
@@ -38,14 +40,16 @@ const styles = StyleSheet.create({
   },
 
   helpInstruction: {
-    fontSize: 17,
+    fontSize: theme.fontSize.medium,
   },
   secondaryTitle: {
-    fontSize: 19,
+    fontSize: theme.fontSize.large,
     fontWeight: '500',
+    color: theme.colors.textPrimaryColor,
   },
   helpTitle: {
-    fontSize: titleSize,
+    fontSize: theme.fontSize.extraLarge,
+    color: theme.colors.textPrimaryColor,
     alignSelf: 'center',
   },
 });

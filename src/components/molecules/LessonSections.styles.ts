@@ -1,19 +1,20 @@
 import {StyleSheet} from 'react-native';
+import theme from '../../styles/theme';
 
 const styles = StyleSheet.create({
   container: {
     marginBottom: 10,
   },
   secondaryTitle: {
-    fontSize: 16,
+    fontSize: theme.fontSize.large,
     fontWeight: '400',
-    color: 'black',
+    color: theme.colors.textPrimaryColor,
     marginBottom: 1.5,
   },
   mainTitle: {
-    fontSize: 20,
+    fontSize: theme.fontSize.extraLarge,
     fontWeight: '500',
-    color: 'black',
+    color: theme.colors.textPrimaryColor,
     textAlign: 'center',
     marginBottom: 10,
   },
@@ -22,8 +23,8 @@ const styles = StyleSheet.create({
   },
 
   question: {
-    fontSize: 14,
-    fontWeight: '600',
+    fontSize: theme.fontSize.medium,
+    fontWeight: '400',
     marginBottom: 7,
   },
   buttonsContainer: {
