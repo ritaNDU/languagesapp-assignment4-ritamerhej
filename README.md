@@ -65,3 +65,12 @@ This is where the theme and the scaling functions are stored.
 ### The data/ folder:
 
 It contains data, and interfaces to structure data objects.
+
+### The navigation/ folder:
+
+This is where navigation is being implemented. react-navigation is being used for navigation.
+
+### The utils/ folder:
+
+This is where some utility functions have been implemented.
+
