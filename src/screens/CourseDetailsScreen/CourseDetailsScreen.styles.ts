@@ -1,13 +1,13 @@
 import {Dimensions, PixelRatio, StyleSheet} from 'react-native';
 import theme from '../../styles/theme';
 
-const imageWidth = Dimensions.get('screen').width / 2;
-const imageheight = imageWidth;
+const {width} = Dimensions.get('window');
+const imageSize = width < 385 ? 100 : width < 410 ? 120 : 140;
 
 export const styles = StyleSheet.create({
   image: {
-    width: PixelRatio.getPixelSizeForLayoutSize(imageWidth),
-    height: PixelRatio.getPixelSizeForLayoutSize(imageheight),
+    width: '100%',
+    height: PixelRatio.getPixelSizeForLayoutSize(imageSize),
     marginBottom: 5,
   },
 

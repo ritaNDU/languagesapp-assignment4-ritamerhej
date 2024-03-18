@@ -4,7 +4,7 @@ import theme from '../../styles/theme';
 const logoSize = 25;
 const {width} = Dimensions.get('window');
 
-const courseImageSize = width < 385 ? 90 : 110;
+const courseImageSize = width < 385 ? 80 : width < 415 ? 90 : 100;
 
 const styles = StyleSheet.create({
   courseCardContainer: {
@@ -35,8 +35,8 @@ const styles = StyleSheet.create({
 
   cardTitles: {
     flex: 1,
-    fontSize: 16,
-    fontWeight: '500',
+    fontSize: theme.fontSize.medium,
+    fontWeight: width < 410 ? '500' : '600',
     color: theme.colors.textPrimaryColor,
     margin: 2.5,
   },

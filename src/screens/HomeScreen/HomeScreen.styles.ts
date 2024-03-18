@@ -3,8 +3,8 @@ import theme from '../../styles/theme';
 
 const {width} = Dimensions.get('window');
 
-const imageContainerSize = 350;
-const imageSize = width < 385 ? 180 : 200;
+let imageSize = width < 385 ? 120 : 140;
+const imageContainerWidth = 350;
 
 export const styles = StyleSheet.create({
   container: {
@@ -12,11 +12,13 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
   },
   imageContainer: {
-    width: imageContainerSize,
-    height: imageContainerSize,
+    width: imageContainerWidth,
+    height: 330,
     alignSelf: 'center',
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 40,
-    marginBottom: 40,
+    marginBottom: 50,
   },
   image: {
     width: '100%',

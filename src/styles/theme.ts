@@ -15,12 +15,6 @@ const theme = {
     extraLarge: 21,
     XxLarge: 23,
   },
-  fontWeight: {
-    thin: '100',
-    normal: '300',
-    semiBold: '500',
-    bold: '700',
-  },
 };
 
 export default theme;

@@ -3,7 +3,7 @@ import theme from '../../styles/theme';
 import {verticalScale} from '../../styles/scaling';
 
 const {width} = Dimensions.get('window');
-const imageSize = width < 385 ? 150 : 200;
+const imageSize = width < 410 ? 120 : 150;
 
 const styles = StyleSheet.create({
   modalTemplate: {
