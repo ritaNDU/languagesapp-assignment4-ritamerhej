@@ -3,7 +3,7 @@ import theme from '../../styles/theme';
 
 const {width} = Dimensions.get('window');
 
-let imageSize = width < 385 ? 120 : 140;
+let imageSize = width < 385 ? 130 : 140;
 const imageContainerWidth = 350;
 
 export const styles = StyleSheet.create({
