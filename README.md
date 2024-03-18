@@ -10,17 +10,17 @@ LinguoPrunto is an app that I wanted to develop with a friend. It's an app where
 2. Inside the cloned repository run either of the following commands:
    `yarn` or `npm install`
 3. To start the server, run either of these commands:
-   `yarn start` or `npm run starr`
+   `yarn start` or `npm run start`
 
 ## How I got organized
 
-I started by drawing my screen on paper and bu drawing the interactions between screens using arrows. Then, I drew a diagram representing the structure of the data I wanted to use for the courses and lessons.
+I started by drawing my screen on paper and by drawing the interactions between screens using arrows. Then, I drew a diagram representing the structure of the data I wanted to use for the courses and lessons.
 Finally I started implementing the app.
 
 ## Challenges Found
 
 1. **Some Problems with Context ane state management**
-   I was mutating state wihtout paying attention, so it took a while to fix the issue. All was find at the end.
+   I was mutating state wihtout paying attention, so it took a while to fix the issue. All was fine at the end.
 
 2. **Emulators and Responsive Design**
    My laptop ism't powerful enough to run emulators, therefore I could only test my design on thr Small Phone and Medium phone emulators. I also found responsive design tricky, but I got the hold of it (I hope so!) after some googling and some course reviewing.
@@ -31,7 +31,7 @@ The code is all located in the src/ folder.
 
 ### The src/ folder:
 
-It is divided into the components/ folder, the features/ folder and the data/ folder.
+It is divided into:
 
 ### The assets/ folder:
 
@@ -42,7 +42,7 @@ It's where all icons and illustrations in general are stored.
 It is divided into:
 
 1. **atoms/** which is where the smallest pieces of components like buttons are implemented.
-2. **molecules/** which is where the atoms are used to create the structures that need to be used in the interface, like card components for example that specifies how a single card should be rendered.
+2. **molecules/** which is where the atoms are used to create the structures that need to be used in the interface, like card components for example that specify how a single card should be rendered.
 3. **organisms/** is where molecules are used to create features for the app. For example, there's the Course Cards List component.
 4. **templates/** this is were modal views have been implemented.
 
@@ -68,9 +68,9 @@ It contains data, and interfaces to structure data objects.
 
 ### The navigation/ folder:
 
-This is where navigation is being implemented. react-navigation is being used for navigation.
+This is where navigation is implemented. react-navigation is being used for navigation.
 
 ### The utils/ folder:
 
-This is where some utility functions have been implemented.
+This is where some utility functions are implemented.
 
