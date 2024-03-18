@@ -1,5 +1,5 @@
 import {Image, Text, View} from 'react-native';
-import React, {useEffect} from 'react';
+import React from 'react';
 import ModalTemplate from './ModalTemplate';
 import {useNavigation} from '@react-navigation/native';
 import {MainNavigatorNavigationProps} from '../../navigation/MainNavigator.types';

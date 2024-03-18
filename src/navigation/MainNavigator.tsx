@@ -4,12 +4,16 @@ import {MainNavigatorStackPropsList} from './MainNavigator.types';
 import HomeScreen from '../screens/HomeScreen/HomeScreen';
 import LessonDetailsScreen from '../screens/LessonDetailsScreen/LessonDetailsScreen';
 import CourseDetailsScreen from '../screens/CourseDetailsScreen/CourseDetailsScreen';
+import theme from '../styles/theme';
 
 const Stack = createNativeStackNavigator<MainNavigatorStackPropsList>();
 
 const MainNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        contentStyle: {backgroundColor: theme.colors.backgroundColor},
+      }}>
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}

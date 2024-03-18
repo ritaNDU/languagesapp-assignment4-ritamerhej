@@ -5,7 +5,7 @@ import {getCourseById} from '../../utils/courseDataGetter';
 import {AppContextType, CourseContext} from '../../store/CourseContextProvider';
 import {Course} from '../../data/courseData.types';
 import LessonCardsList from '../../components/organisms/LessonCardsList';
-import {Image, Text, View} from 'react-native';
+import {Image, ScrollView, Text, View} from 'react-native';
 import {styles} from './CourseDetailsScreen.styles';
 import FinishButton from '../../components/atoms/Buttons/FinishButton';
 import FinishCourseModal from '../../components/templates/FinishCourseModal';
@@ -44,7 +44,8 @@ const CourseDetailsScreen = () => {
   }
 
   return (
-    <View style={commonStyles.container}>
+    <ScrollView contentContainerStyle={commonStyles.container}>
+      <FinishCourseModal closeModal={closeModal} visible={visible} />
       <Image style={styles.image} source={course.imageUrl} resizeMode="cover" />
       <Text style={styles.title}>Description</Text>
       <Text style={styles.description}>{course.description}</Text>
@@ -55,8 +56,7 @@ const CourseDetailsScreen = () => {
           <FinishButton handleFinishCourse={finishCourse} />
         </View>
       )}
-      <FinishCourseModal closeModal={closeModal} visible={visible} />
-    </View>
+    </ScrollView>
   );
 };
 

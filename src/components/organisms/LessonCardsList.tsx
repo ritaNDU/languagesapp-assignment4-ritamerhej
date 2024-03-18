@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Lesson} from '../../data/courseData.types';
 import LessonDetailsCard from '../molecules/LessonDetailsCard';
 
@@ -8,28 +8,25 @@ type Props = {
   courseId: string;
 };
 
-function keyExtractor(lesson: Lesson) {
-  return lesson.id;
-}
-
 const CourseCardsList = ({lessonsData, courseId}: Props) => {
-  function lessonRenderer(itemData: {item: Lesson}) {
-    return (
-      <LessonDetailsCard
-        lessonId={itemData.item.id}
-        courseId={courseId}
-        title={itemData.item.title}
-      />
-    );
+  function lessonRenderer(itemData: Lesson[]) {
+    return itemData.map(lesson => {
+      return (
+        <LessonDetailsCard
+          lessonId={lesson.id}
+          courseId={courseId}
+          title={lesson.title}
+          key={lesson.id}
+        />
+      );
+    });
   }
 
-  return (
-    <FlatList
-      data={lessonsData}
-      keyExtractor={keyExtractor}
-      renderItem={lessonRenderer}
-    />
-  );
+  return <View style={styles.container}>{lessonRenderer(lessonsData)}</View>;
 };
 
 export default CourseCardsList;
+
+const styles = StyleSheet.create({
+  container: {marginBottom: 10},
+});

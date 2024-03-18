@@ -1,12 +1,14 @@
-import {PixelRatio, StyleSheet} from 'react-native';
+import {Dimensions, PixelRatio, StyleSheet} from 'react-native';
 import theme from '../../styles/theme';
 
 const logoSize = 25;
-const courseImageSize = 108;
+const {width} = Dimensions.get('window');
+
+const courseImageSize = width < 385 ? 90 : 110;
 
 const styles = StyleSheet.create({
   courseCardContainer: {
-    width: 250,
+    width: width < 385 ? 220 : 250,
     elevation: 10,
     backgroundColor: theme.colors.backgroundColor,
     padding: 30,
@@ -14,6 +16,7 @@ const styles = StyleSheet.create({
     margin: 20,
     marginBottom: 30,
     borderRadius: 20,
+    alignItems: 'center',
 
     overflow: 'hidden',
   },

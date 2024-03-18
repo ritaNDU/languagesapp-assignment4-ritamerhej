@@ -1,4 +1,4 @@
-import {View, Text, Image, Pressable, ImageProps} from 'react-native';
+import {Text, Image, Pressable, ImageProps} from 'react-native';
 import React from 'react';
 import styles from './Cards.styles';
 import {useNavigation} from '@react-navigation/native';
@@ -21,9 +21,7 @@ const CourseDetailsCard = ({title, id, imageUrl}: Props) => {
       style={styles.courseCardContainer}
       onPress={handleGoToCourse(id)}
       android_ripple={{color: '#ccc'}}>
-      <View style={styles.imageContainer}>
-        <Image source={imageUrl} style={styles.image} />
-      </View>
+      <Image source={imageUrl} style={styles.image} resizeMode="cover" />
       <Text style={styles.cardTitles}>{title}</Text>
     </Pressable>
   );

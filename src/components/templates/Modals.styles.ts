@@ -1,7 +1,9 @@
-import {PixelRatio, StyleSheet} from 'react-native';
+import {Dimensions, PixelRatio, StyleSheet} from 'react-native';
 import theme from '../../styles/theme';
+import {verticalScale} from '../../styles/scaling';
 
-const imageSize = 200;
+const {width} = Dimensions.get('window');
+const imageSize = width < 385 ? 150 : 200;
 
 const styles = StyleSheet.create({
   modalTemplate: {
@@ -20,7 +22,7 @@ const styles = StyleSheet.create({
     height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 20,
+    gap: verticalScale(10),
   },
   title: {
     fontSize: theme.fontSize.XxLarge,

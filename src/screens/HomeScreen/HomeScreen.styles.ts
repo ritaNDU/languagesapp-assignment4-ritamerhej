@@ -1,7 +1,10 @@
-import {PixelRatio, StyleSheet} from 'react-native';
+import {Dimensions, PixelRatio, StyleSheet} from 'react-native';
+import theme from '../../styles/theme';
+
+const {width} = Dimensions.get('window');
 
 const imageContainerSize = 350;
-const imageSize = 200;
+const imageSize = width < 385 ? 180 : 200;
 
 export const styles = StyleSheet.create({
   container: {
@@ -16,13 +19,13 @@ export const styles = StyleSheet.create({
     marginBottom: 40,
   },
   image: {
-    width: PixelRatio.getPixelSizeForLayoutSize(imageSize),
+    width: '100%',
     height: PixelRatio.getPixelSizeForLayoutSize(imageSize),
     borderRadius: 40,
   },
   titleSize: {
-    fontSize: 23,
-    color: '#000',
+    fontSize: theme.fontSize.XxLarge,
+    color: theme.colors.textPrimaryColor,
     fontWeight: '700',
   },
   helpButtonContainer: {
