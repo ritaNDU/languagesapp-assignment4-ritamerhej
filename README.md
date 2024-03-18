@@ -19,8 +19,8 @@ Finally I started implementing the app.
 
 ## Challenges Found
 
-1. **Some Problems with Context ane state management**
-   I was mutating state wihtout paying attention, so it took a while to fix the issue. All was fine at the end.
+1. **Some Problems with state management**
+   I was mutating state without paying attention, so it took a while to fix the issue. All was fine at the end.
 
 2. **Emulators and Responsive Design**
    My laptop ism't powerful enough to run emulators, therefore I could only test my design on thr Small Phone and Medium phone emulators. I also found responsive design tricky, but I got the hold of it (I hope so!) after some googling and some course reviewing.
